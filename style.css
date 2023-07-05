@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  --ff-base: "Hanken Grotesk", sans-serif;
+  --fs-para: 18px;
+  --pc-light-red: hsl(0, 100%, 67%);
+  --pc-Orangey-yellow: hsl(39, 100%, 56%);
+  --pc-Green-teal: hsl(166, 100%, 37%);
+  --pc-Cobalt-blue: hsl(234, 85%, 45%);
+  --gc-bg-Light-slate-blue: hsl(252, 100%, 67%);
+  --gc-bg-Light-royal-blue: hsl(241, 81%, 54%);
+  --gc-c-Violet-blue: hsla(256, 72%, 46%, 1);
+  --gc-c-Persian-blue: hsla(241, 72%, 46%, 0);
+  --nc-Pale-blue: hsl(221, 100%, 96%);
+  --nc-Light-lavender: hsl(241, 100%, 89%);
+  --nc-Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: var(--ff-base);
+  background-color: var(--nc-Pale-blue);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  border-radius: 2rem;
+  width: 600px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result {
+  width: 50%;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(
+    to bottom,
+    var(--gc-bg-Light-slate-blue),
+    var(--gc-bg-Light-royal-blue)
+  );
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.result-title {
+  color: var(--nc-Light-lavender);
+  margin-bottom: 1rem;
+}
+
+.result-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    var(--gc-c-Violet-blue),
+    var(--gc-c-Persian-blue)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.result-circle h1 {
+  color: white;
+  font-size: 3.5rem;
+}
+
+.result-circle p {
+  font-size: 15px;
+  color: var(--nc-Light-lavender);
+}
+
+.result b {
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 1rem;
+}
+
+.result-info {
+  font-size: 14px;
+  color: var(--nc-Light-lavender);
+  width: 200px;
+}
+
+.summary {
+  width: 50%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.summary-title {
+  color: var(--nc-Dark-gray-blue);
+  font-weight: 800;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 1rem 0.5rem;
+}
+
+.badge {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.summary p {
+  color: gray;
+}
+
+.summary p b {
+  color: var(--nc-Dark-gray-blue);
+}
+
+.row:nth-child(1) {
+  background-color: rgb(250, 242, 244);
+}
+
+.row:nth-child(1) .badge p {
+  color: var(--pc-light-red);
+}
+
+.row:nth-child(2) {
+  background-color: rgb(250, 241, 224);
+}
+
+.row:nth-child(2) .badge p {
+  color: var(--pc-Orangey-yellow);
+}
+
+.row:nth-child(3) {
+  background-color: rgb(225, 250, 225);
+}
+
+.row:nth-child(3) .badge p {
+  color: var(--pc-Green-teal);
+}
+
+.row:nth-child(4) {
+  background-color: rgb(231, 231, 253);
+}
+
+.row:nth-child(4) .badge p {
+  color: var(--pc-Cobalt-blue);
+}
+
+.btn {
+  margin-top: auto;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--nc-Dark-gray-blue);
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--gc-bg-Light-slate-blue),
+    var(--gc-bg-Light-royal-blue)
+  );
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    align-items: flex-start;
+    background-color: white;
+  }
+  .card {
+    box-shadow: none;
+  }
+  .card-container {
+    flex-direction: column;
+  }
+  .result {
+    border-radius: 0 0 2rem 2rem;
+    width: 100%;
+  }
+
+  .result-info {
+    width: 250px;
+  }
+
+  .summary {
+    width: 100%;
+  }
+}
